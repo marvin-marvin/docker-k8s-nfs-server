@@ -9,7 +9,7 @@ metadata:
   labels:
     k8s-app: nfs-server
     location: lan
-  name: timemachine
+  name: nfs-server
   selfLink: /apis/extensions/v1beta1/namespaces/lan/deployments/nfs-server
 spec:
   progressDeadlineSeconds: 600
@@ -49,21 +49,23 @@ spec:
           name: nfs2
           protocol: TCP
         volumeMounts:
+#        - mountPath: /exports
+#          name: k8s-cfg-nfs-server
+#        - mountPath: /usr2
+#          name: k8s-cfg-nfs-server-usr2
         - mountPath: /exports
-          name: k8s-cfg-nfs-server
-        - mountPath: /usr2
           name: k8s-cfg-nfs-server-usr2
         resources: {}
         securityContext:
-          privileged: false
+          privileged: true
           procMount: Default
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       volumes:
-      - name: k8s-cfg-nfs-server
-        hostPath:
-          path: /root/k8s-cfg/nfs-server
-          type: Directory
+#      - name: k8s-cfg-nfs-server
+#        hostPath:
+#          path: /root/k8s-cfg/nfs-server
+#          type: Directory
       - name: k8s-cfg-nfs-server-usr2
         hostPath:
           path: /usr2
