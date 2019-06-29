@@ -72,8 +72,8 @@ spec:
           type: Directory
       dnsPolicy: ClusterFirst
       hostNetwork: false
-      nodeSelector:
-        nodetype: nuc
+#      nodeSelector:
+#        nodetype: nuc
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
