@@ -63,7 +63,7 @@ spec:
 #          type: Directory
       - name: k8s-nfs-server
         hostPath:
-          path: /tmp
+          path: /root/k8s/PVC
           type: Directory
       dnsPolicy: ClusterFirst
       hostNetwork: true
