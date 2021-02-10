@@ -4,14 +4,14 @@ metadata:
   name: k8s-pvc
 spec:
   capacity:
-    storage: 3000Gi
+    storage: 100Gi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Recycle
-  storageClassName: nfs
-  mountOptions:
-    - hard
-    - nfsvers=4.1
+#  storageClassName: nfs
+#  mountOptions:
+#    - hard
+#    - nfsvers=4.1
   nfs:
     server: 10.0.0.1
     path: /exports
@@ -26,4 +26,4 @@ spec:
   storageClassName: ""
   resources:
     requests:
-      storage: 3000Gi
+      storage: 100Gi
