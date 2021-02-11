@@ -105,7 +105,6 @@ status: {}
 apiVersion: v1
 kind: Service                                                                                                                                                                                                                                                                                                      
 metadata:                                                                                                                                                        
-  name: nfs-service
   labels:
     k8s-app: nfs-server
   name: nfs-server                                                                                                                                              
