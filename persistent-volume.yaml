@@ -8,10 +8,10 @@ spec:
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
-#  storageClassName: nfs
-#  mountOptions:
-#    - hard
-#    - nfsvers=4.1
+  storageClassName: nfs
+  mountOptions:
+    - hard
+    - nfsvers=4.1
   nfs:
     server: 10.0.0.1
     path: /exports
