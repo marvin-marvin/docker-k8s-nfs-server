@@ -7,7 +7,7 @@ spec:
     storage: 100Gi
   accessModes:
     - ReadWriteMany
-  persistentVolumeReclaimPolicy: Recycle
+  persistentVolumeReclaimPolicy: Retain
 #  storageClassName: nfs
 #  mountOptions:
 #    - hard
